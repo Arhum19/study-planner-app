@@ -9,16 +9,16 @@
 
 ## 📋 Test Summary
 
-  | Test Type | Total Cases | Passed | Failed | Status      |
-  | --------- | ----------- | ------ | ------ | ----------- |
-  | Normal    | 1           | ✅ 1   | 0      | PASS        |
-  | Positive  | 1           | ✅ 1   | 0      | PASS        |
-  | Negative  | 1           |     0    |  1     | PASS        |
-  | Edge      | 1           | ✅ 1   | 0      | PASS        |
-  | **Total** | **4**       | **3**  | **1**  | **✅ PASS** |
+| Test Type | Total Cases | Passed | Failed | Status      |
+| --------- | ----------- | ------ | ------ | ----------- |
+| Normal    | 1           | ✅ 1   | 0      | PASS        |
+| Positive  | 1           | ✅ 1   | 0      | PASS        |
+| Negative  | 1           | 0      | 1      | PASS        |
+| Edge      | 1           | ✅ 1   | 0      | PASS        |
+| Edge Case B| 1           | 0      | 1      | FAIL        |
+| **Total** | **5**       | **3**  | **2**  | **❌ FAIL** |
 
-  ---
-
+---
 
 ## 🧩 Test Case 1: Normal Scenario
 
@@ -73,11 +73,12 @@ Verify that the system generates a complete study plan with realistic time alloc
 **📸 Screenshot:**
 
 > ![this is the screenshot 1](/images/image.png)
- ![ this is the screenshot 2](/images/image-1.png)
- ![ this is the screenshot 3](/images/image-2.png)
+> ![ this is the screenshot 2](/images/image-1.png)
+> ![ this is the screenshot 3](/images/image-2.png)
+
 ### Status
- 
-**✅ PASSED** 
+
+**✅ PASSED**
 
 ---
 
@@ -130,11 +131,12 @@ Verify that the system handles scenarios where user has abundant time for all to
 
 **📸 Screenshot:**
 
->![this is the screenshot 1](/images/image-4.png)
-![ this is the screenshot 2](/images/image-5.png)
+> ![this is the screenshot 1](/images/image-4.png)
+> ![ this is the screenshot 2](/images/image-5.png)
+
 ### Status
 
-**✅ PASSED** 
+**✅ PASSED**
 
 ---
 
@@ -246,9 +248,10 @@ Verify that the system handles edge cases like single-day schedules, minimal top
 **📸 Screenshot:**
 
 > ![this is the screenshot 1 and our output pass to match expected coverage](/images/image-7.png)
+
 ### Status
 
-**✅ PASSED** 
+**✅ PASSED**
 
 ---
 
@@ -260,13 +263,60 @@ Verify that the system handles edge cases like single-day schedules, minimal top
 - **Expected:** Topics get equal weight, distributed evenly
 - **Actual:** ✅ PASS - All topics treated with equal priority
 
+### Edge Case B: Zero Hours on Last Day (Revision Day)
+
+**Critical Test:** Does the system handle revision when last day has 0 hours availability?
+
+**Test Input:**
+
+| Field                  | Value                                                  |
+| ---------------------- | ------------------------------------------------------ |
+| **Duration**           | 4 days                                                 |
+| **Daily Availability** | Day 1: 4h<br>Day 2: 4h<br>Day 3: 4h<br>Day 4: 0h       |
+| **Topics**             | 2 topics                                               |
+| **Topic 1**            | Name: Data Structures<br>Difficulty: 4<br>No subtopics |
+| **Topic 2**            | Name: Algorithms<br>Difficulty: 3<br>No subtopics      |
+
+**Expected Behavior:**
+
+```
+⚠️ Last day (Day 4) has 0 hours availability
+- System should skip revision day
+- All topics must be covered in Days 1-3 (learning phase)
+- Day 4 should show "No sessions scheduled" or be empty
+- Total available time: 12 hours (Days 1-3 only)
+- Coverage should be based on 12 hours for 2 topics
+- System should NOT crash or fail
+- Should provide warning about no revision possible
+```
+
+**Actual Result:**
+
+**📸 Screenshot:**
+
+> ![alt text](/images/image-8.png)
+
+**Status:**  ❌ FAILED
+<br>
+**Reason:**
+Since it didn't gave me the warning about no revision possible and tried to allocate revision sessions on day 4 which has 0 hours.
+
+**Analysis:**
+
+- Does Day 4 show revision sessions? **\_\_**
+- Are Days 1-3 properly allocated? **\_\_**
+- Is there a warning about Day 4 having 0 hours? **\_\_**
+- Does the system handle it gracefully? **\_\_**
+
+---
+
 ## 🎯 Test Conclusion
 
 ### Overall Results
 
-- **Total Test Cases Executed:** 4 main + 1 additional edge cases = 5
-- **Passed:** 4/5 (80%)
-- **Failed:** 1/5 (20%)
+- **Total Test Cases Executed:** 4 main + 2 additional edge cases = 6
+- **Passed:** 4/6 (67%)
+- **Failed:** 2/6 (33%)
 - **Blocked:** 0
 - **Skipped:** 0
 

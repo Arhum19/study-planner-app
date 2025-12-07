@@ -35,36 +35,43 @@ Aura Planner is a **web-based study scheduling assistant** that takes the stress
 ### Installation & Setup
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/Arhum19/Study-Planner-Assistant.git
    cd Study-Planner-Assistant
    ```
 
 2. **Install Frontend Dependencies**
+
    ```bash
    cd auraplanner
    npm install
    ```
 
 3. **Install Backend Dependencies**
+
    ```bash
    cd ../backend
    npm install
    ```
 
 4. **Start the Backend Server**
+
    ```bash
    # From the backend directory
    npm start
    ```
+
    - Backend runs on: `http://localhost:5000`
 
 5. **Start the Frontend Development Server**
+
    ```bash
    # Open a new terminal, navigate to auraplanner directory
    cd auraplanner
    npm run dev
    ```
+
    - Frontend runs on: `http://localhost:5174`
 
 6. **Open Your Browser**
@@ -109,60 +116,48 @@ Click **"Generate Study Plan"** and watch the algorithm create your personalized
 ### 📥 Example Input
 
 **Schedule Configuration:**
+
 - **Days**: 7 days
-- **Daily Hours**: 
+- **Daily Hours**:
   - Days 1-6: 4 hours each
   - Day 7: 3 hours
 
 **Topics:**
 
-| Topic | Difficulty | Subtopics |
-|-------|-----------|-----------|
-| **Data Structures** | 5 | Arrays (30%), Linked Lists (35%), Trees (35%) |
-| **Algorithms** | 4 | Sorting (40%), Searching (30%), Dynamic Programming (30%) |
-| **Database Systems** | 3 | SQL Basics (50%), Normalization (30%), Indexing (20%) |
+| Topic                | Difficulty | Subtopics                                                 |
+| -------------------- | ---------- | --------------------------------------------------------- |
+| **Data Structures**  | 5          | Arrays (30%), Linked Lists (35%), Trees (35%)             |
+| **Algorithms**       | 4          | Sorting (40%), Searching (30%), Dynamic Programming (30%) |
+| **Database Systems** | 3          | SQL Basics (50%), Normalization (30%), Indexing (20%)     |
 
 **📸 Input Screenshot:**
 
-> *[Paste your screenshot of the input form here]*
-
+> ![alt text](image.png)
+![alt text](image-1.png)
 ---
 
 ### 📤 Example Output
-
-The generated study plan will show:
-
 **Days 1-6: Learning Phase**
+
 - Each day contains study sessions for different topics/subtopics
 - Sessions are allocated based on difficulty weights
 - Progress bars show completion percentage
 
 **Day 7: Revision Phase**
+
 - Final day reserved exclusively for revision
 - Reviews all topics covered in previous days
 - Organized revision sessions
 
-**Sample Day Structure:**
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
 
-```
-📅 Day 1 (4.0h available)
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🎯 Progress: ████████░░ 85.5%
 
-📖 Data Structures > Arrays
-   ⏱️ 1.5h | 🎯 Difficulty: 5
+**📸 Export PDF Screenshot:**
 
-📖 Algorithms > Sorting  
-   ⏱️ 1.3h | 🎯 Difficulty: 4
-
-📖 Database Systems > SQL Basics
-   ⏱️ 1.0h | 🎯 Difficulty: 3
-```
-
-**📸 Output Screenshot:**
-
-> *[Paste your screenshot of the generated study plan here]*
-
+> 
 ---
 
 ## 🏗️ Project Structure
@@ -207,16 +202,17 @@ Study-Planner-Assistant/
 ## 🛠️ Technology Stack
 
 ### Frontend
+
 - **React 18** - UI framework
 - **Vite** - Build tool and dev server
 - **Tailwind CSS** - Utility-first CSS framework
 - **Lucide React** - Icon library
 
 ### Backend
+
 - **Node.js** - JavaScript runtime
 - **Express.js** - Web framework
 - **CORS** - Cross-origin resource sharing
-
 
 ## 📊 Algorithm Details
 
@@ -224,12 +220,12 @@ Study-Planner-Assistant/
 
 ```javascript
 DIFFICULTY_WEIGHTS = {
-  1: 1.0,   // Easy
-  2: 1.2,   // Medium-Easy
-  3: 1.4,   // Medium
-  4: 1.7,   // Medium-Hard
-  5: 2.0    // Very Hard
-}
+  1: 1.0, // Easy
+  2: 1.2, // Medium-Easy
+  3: 1.4, // Medium
+  4: 1.7, // Medium-Hard
+  5: 2.0, // Very Hard
+};
 ```
 
 ### Scheduling Strategy
@@ -252,20 +248,24 @@ DIFFICULTY_WEIGHTS = {
 ## 🎨 Features Showcase
 
 ### Expand/Collapse All
+
 - Toggle all days open or closed with one click
 - Individual day expansion for focused viewing
 
 ### Dark Mode
+
 - System-friendly dark theme
 - Reduces eye strain during late-night planning
 - Persistent preference
 
 ### Responsive Design
+
 - Mobile-first approach
 - Touch-friendly controls
 - Adapts to any screen size
 
 ### PDF Export
+
 - Professional table format
 - Color-coded session types (Learning vs. Revision)
 - Print-ready layout
@@ -297,6 +297,7 @@ Comprehensive documentation is available in the `/documentation` folder:
 ## 🚀 Future Roadmap
 
 ### 3-Month Plan (Q1 2026)
+
 - 🔐 User authentication (JWT)
 - 💾 Database integration (MongoDB)
 - 📧 Email notifications
@@ -304,6 +305,7 @@ Comprehensive documentation is available in the `/documentation` folder:
 - 📊 Analytics integration
 
 ### 1-Year Plan (2026)
+
 - 🤖 AI-powered schedule optimization
 - 📱 Mobile applications (iOS & Android)
 - 🔗 Topic resource links
@@ -311,6 +313,7 @@ Comprehensive documentation is available in the `/documentation` folder:
 - 🔔 Smart notifications & alarms
 
 ### 2-Year Plan (2027)
+
 - 💳 Premium subscription model
 - 👨‍🏫 Personal teacher consultations
 - 📹 Live classes & recorded content
@@ -342,6 +345,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👨‍💻 Author
 
 **Arhum19**
+
 - GitHub: [@Arhum19](https://github.com/Arhum19)
 - Repository: [Study-Planner-Assistant](https://github.com/Arhum19/Study-Planner-Assistant)
 
@@ -358,6 +362,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 📞 Support
 
 If you encounter any issues or have questions:
+
 - 🐛 [Open an issue](https://github.com/Arhum19/Study-Planner-Assistant/issues)
 - 💬 Start a discussion in the repository
 - 📧 Contact the maintainer
@@ -367,6 +372,7 @@ If you encounter any issues or have questions:
 ## ⭐ Show Your Support
 
 If you find this project helpful, please consider:
+
 - ⭐ Starring the repository
 - 🍴 Forking and contributing
 - 📢 Sharing with fellow students
