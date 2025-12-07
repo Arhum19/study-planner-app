@@ -25,7 +25,7 @@ export default function PlanView({ plan, darkMode = false }) {
               darkMode ? "text-white" : "text-gray-800"
             }`}
           >
-            Arhum Study Planner
+            Aura Study Planner
           </h2>
           <p
             className={`text-sm mt-1 ${
