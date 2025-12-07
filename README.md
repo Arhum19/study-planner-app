@@ -37,8 +37,7 @@ Aura Planner is a **web-based study scheduling assistant** that takes the stress
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/Arhum19/Study-Planner-Assistant.git
-   cd Study-Planner-Assistant
+   git clone https://github.com/Arhum19/SP23BSCS0040.git
    ```
 
 2. **Install Frontend Dependencies**
