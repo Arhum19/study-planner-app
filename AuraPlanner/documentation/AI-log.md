@@ -1,4 +1,4 @@
-# 🤖 AI Development Log - Aura Planner
+# 🤖 AI Development Log - Arhum Study Planner
 
 > **Project:** Study Planner Assistant  
 > **Developer:** Arhum19  

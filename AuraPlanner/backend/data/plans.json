@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generatedAt": "2025-12-07T02:19:29.604Z",
+    "generatedAt": "2025-12-07T08:14:22.107Z",
     "durationDays": 7,
-    "totalAvailableHours": 21,
-    "totalRequiredHours": 18,
-    "allocatedLearningHours": 17.77,
-    "allocatedRevisionHours": 3,
+    "totalAvailableHours": 20,
+    "totalRequiredHours": 17,
+    "allocatedLearningHours": 16.84,
+    "allocatedRevisionHours": 2.89,
     "learningDays": 6,
     "revisionDays": 1,
     "insufficient_hours": false,
@@ -14,43 +14,43 @@
   },
   "topicsSummary": [
     {
-      "name": "asd",
+      "name": "naviyan",
       "difficulty": 5,
-      "totalHours": 7.66,
-      "allocatedHours": 7.66,
+      "totalHours": 6.94,
+      "allocatedHours": 6.94,
       "progress": 100
     },
     {
-      "name": "ww",
+      "name": "dsa",
       "difficulty": 4,
-      "totalHours": 6.51,
-      "allocatedHours": 6.3,
+      "totalHours": 5.9,
+      "allocatedHours": 5.73,
       "progress": 97
     },
     {
-      "name": "ooo",
-      "difficulty": 1,
-      "totalHours": 3.83,
-      "allocatedHours": 3.81,
+      "name": "qqqq",
+      "difficulty": 2,
+      "totalHours": 4.16,
+      "allocatedHours": 4.16,
       "progress": 100
     }
   ],
   "dailyPlan": [
     {
       "day": 1,
-      "availabilityHours": 3,
+      "availabilityHours": 2,
       "sessions": [
         {
           "duration": 1.5,
-          "topic": "asd",
-          "subtopic": "asd",
-          "progressAfterSession": 20
+          "topic": "naviyan",
+          "subtopic": "naviyan",
+          "progressAfterSession": 22
         },
         {
-          "duration": 1.5,
-          "topic": "asd",
-          "subtopic": "asd",
-          "progressAfterSession": 39
+          "duration": 0.5,
+          "topic": "naviyan",
+          "subtopic": "naviyan",
+          "progressAfterSession": 29
         }
       ]
     },
@@ -60,15 +60,15 @@
       "sessions": [
         {
           "duration": 1.5,
-          "topic": "asd",
-          "subtopic": "asd",
-          "progressAfterSession": 59
+          "topic": "naviyan",
+          "subtopic": "naviyan",
+          "progressAfterSession": 50
         },
         {
           "duration": 1.5,
-          "topic": "ww",
-          "subtopic": "qq",
-          "progressAfterSession": 38
+          "topic": "qqqq",
+          "subtopic": "qqqq",
+          "progressAfterSession": 36
         }
       ]
     },
@@ -78,15 +78,15 @@
       "sessions": [
         {
           "duration": 1.5,
-          "topic": "ooo",
-          "subtopic": "ooo",
-          "progressAfterSession": 39
+          "topic": "naviyan",
+          "subtopic": "naviyan",
+          "progressAfterSession": 72
         },
         {
           "duration": 1.5,
-          "topic": "asd",
-          "subtopic": "asd",
-          "progressAfterSession": 78
+          "topic": "dsa",
+          "subtopic": "sorting",
+          "progressAfterSession": 50
         }
       ]
     },
@@ -96,15 +96,15 @@
       "sessions": [
         {
           "duration": 1.5,
-          "topic": "ww",
-          "subtopic": "qew",
-          "progressAfterSession": 58
+          "topic": "dsa",
+          "subtopic": "shery",
+          "progressAfterSession": 51
         },
         {
           "duration": 1.5,
-          "topic": "ww",
-          "subtopic": "qq",
-          "progressAfterSession": 77
+          "topic": "qqqq",
+          "subtopic": "qqqq",
+          "progressAfterSession": 72
         }
       ]
     },
@@ -114,21 +114,21 @@
       "sessions": [
         {
           "duration": 1.5,
-          "topic": "ooo",
-          "subtopic": "ooo",
-          "progressAfterSession": 78
+          "topic": "naviyan",
+          "subtopic": "naviyan",
+          "progressAfterSession": 94
         },
         {
-          "duration": 1.12,
-          "topic": "asd",
-          "subtopic": "asd",
-          "progressAfterSession": 93
+          "duration": 1.13,
+          "topic": "dsa",
+          "subtopic": "sorting",
+          "progressAfterSession": 88
         },
         {
           "duration": 0.38,
-          "topic": "ww",
-          "subtopic": "qew",
-          "progressAfterSession": 72
+          "topic": "dsa",
+          "subtopic": "shery",
+          "progressAfterSession": 64
         }
       ]
     },
@@ -138,44 +138,50 @@
       "sessions": [
         {
           "duration": 0.75,
-          "topic": "ww",
-          "subtopic": "qq",
-          "progressAfterSession": 96
+          "topic": "qqqq",
+          "subtopic": "qqqq",
+          "progressAfterSession": 90
         },
         {
           "duration": 0.56,
-          "topic": "ooo",
-          "subtopic": "ooo",
-          "progressAfterSession": 93
+          "topic": "dsa",
+          "subtopic": "shery",
+          "progressAfterSession": 83
         },
         {
           "duration": 0.42,
-          "topic": "ww",
-          "subtopic": "qew",
-          "progressAfterSession": 88
+          "topic": "dsa",
+          "subtopic": "shery",
+          "progressAfterSession": 98
         },
         {
           "duration": 0.32,
-          "topic": "asd",
-          "subtopic": "asd",
-          "progressAfterSession": 97
-        },
-        {
-          "duration": 0.25,
-          "topic": "ww",
-          "subtopic": "qew",
+          "topic": "naviyan",
+          "subtopic": "naviyan",
           "progressAfterSession": 98
         },
         {
           "duration": 0.25,
-          "topic": "ooo",
-          "subtopic": "ooo",
+          "topic": "qqqq",
+          "subtopic": "qqqq",
+          "progressAfterSession": 96
+        },
+        {
+          "duration": 0.25,
+          "topic": "dsa",
+          "subtopic": "sorting",
+          "progressAfterSession": 97
+        },
+        {
+          "duration": 0.16,
+          "topic": "qqqq",
+          "subtopic": "qqqq",
           "progressAfterSession": 100
         },
         {
-          "duration": 0.22,
-          "topic": "asd",
-          "subtopic": "asd",
+          "duration": 0.12,
+          "topic": "naviyan",
+          "subtopic": "naviyan",
           "progressAfterSession": 100
         }
       ]
@@ -186,20 +192,20 @@
       "sessions": [
         {
           "duration": 1,
-          "topic": "asd",
-          "subtopic": "asd",
+          "topic": "naviyan",
+          "subtopic": "naviyan",
           "type": "revision"
         },
         {
           "duration": 1,
-          "topic": "asd",
-          "subtopic": "asd",
+          "topic": "naviyan",
+          "subtopic": "naviyan",
           "type": "revision"
         },
         {
-          "duration": 1,
-          "topic": "ww",
-          "subtopic": "qq",
+          "duration": 0.89,
+          "topic": "dsa",
+          "subtopic": "sorting",
           "type": "revision"
         }
       ]
