@@ -1,10 +1,3 @@
-/**
- * StudyPlanr Scheduler (updated)
- * - Adds minimum/estimated hours per topic
- * - Adaptive session chunk sizing when availability is tight
- * - Dynamic reprioritization while scheduling
- * - Reserve revision days only when coverage is achievable
- */
 
 // Difficulty to weight mapping (unchanged)
 const DIFFICULTY_WEIGHTS = {
@@ -38,14 +31,6 @@ function calculateTotalHours(availability) {
   return availability.reduce((sum, day) => sum + (day.hours || 0), 0);
 }
 
-/**
- * Calculate hours required for each topic based on difficulty weight
- *
- * Changes:
- * - Supports optional topic.estimatedHours (explicit estimate from user)
- * - Ensures a sensible minimum hours per topic based on difficulty
- * - Allocated hours = max(proportionalAllocation, estimatedHoursIfProvided, minHours)
- */
 function distributeHoursAcrossTopics(topics, totalAvailableHours) {
   // Defensive copy
   const topicsCopy = topics.map((t) => ({ ...t }));
@@ -138,8 +123,7 @@ function createTaskQueue(topics) {
  * Returns {dailyPlan, taskStates, allocatedHours}
  */
 function assignSessions(tasks, availability, sessionLength) {
-  // tasks: array of task objects with remainingHours
-  // availability: array [{day, hours}]
+
   const dailyPlan = [];
   // Use deep clone of tasks as mutable states
   const taskStates = tasks.map((t) => ({ ...t }));
@@ -270,112 +254,6 @@ function calculateRevisionSlots(tasks) {
   });
 
   return revisionNeeds;
-}
-
-/**
- * Create revision plan for appropriate final days
- *
- * Changes:
- * - If revisionDaysCount === 0 (no revision), function returns []
- * - When revision days exist, schedule revision sessions first, then fill remaining with unfinished learning
- */
-function createRevisionPlan(
-  revisionNeeds,
-  availability,
-  dailyPlan,
-  taskStates
-) {
-  // If there are no revision needs or no availability, return empty
-  if (!revisionNeeds || revisionNeeds.length === 0) return [];
-
-  const totalDays = availability.length;
-
-  // Determine revisionDaysCount using same heuristic as assignSessions/previous code
-  let revisionDaysCount;
-  if (totalDays <= 3) {
-    revisionDaysCount = 1;
-  } else if (totalDays <= 7) {
-    revisionDaysCount = Math.max(1, Math.ceil(totalDays * 0.2));
-  } else {
-    revisionDaysCount = Math.ceil(totalDays * 0.25);
-  }
-
-  // Ensure we don't exceed totalDays
-  revisionDaysCount = Math.min(revisionDaysCount, totalDays);
-
-  // revision days start index (1-based day property)
-  const revisionStartDay = totalDays - revisionDaysCount + 1;
-
-  // Find the dailyPlan entries for revision days (they were added above as placeholders or with sessions)
-  const revisionDays = dailyPlan.filter((day) => day.day >= revisionStartDay);
-
-  // Clone revisionNeeds array to mutate
-  const revisionQueue = [...revisionNeeds];
-
-  // Schedule revision sessions into revision days
-  revisionDays.forEach((day) => {
-    // compute free time in that day (remaining availability after sessions scheduled earlier)
-    const used = day.sessions.reduce((s, ss) => s + (ss.duration || 0), 0);
-    let remainingHours = Math.max(0, (day.availabilityHours || 0) - used);
-
-    // First assign revision sessions (one by one)
-    while (remainingHours >= 0.25 && revisionQueue.length > 0) {
-      const rev = revisionQueue.shift();
-
-      // allocate up to rev.duration but cap to 1.0 hour per slot to keep sessions reasonable
-      const revDuration = Math.min(rev.duration || 0.25, remainingHours, 1.0);
-      if (revDuration < 0.25) break;
-
-      day.sessions.push({
-        duration: parseFloat(revDuration.toFixed(2)),
-        topic: rev.topic,
-        subtopic: rev.subtopic,
-        type: "revision",
-      });
-
-      remainingHours = parseFloat((remainingHours - revDuration).toFixed(6));
-    }
-
-    // If there's still time and there are unfinished tasks, allocate to them (small learning boost)
-    if (remainingHours >= 0.25) {
-      const incomplete = taskStates
-        .filter((t) => t.remainingHours > 0.001)
-        .sort((a, b) => b.remainingHours - a.remainingHours);
-      while (remainingHours >= 0.25 && incomplete.length > 0) {
-        const t = incomplete[0];
-        const sess = Math.min(remainingHours, t.remainingHours, 1.5);
-        if (sess < 0.25) break;
-
-        t.remainingHours = Math.max(
-          0,
-          parseFloat((t.remainingHours - sess).toFixed(6))
-        );
-        t.progressPercent =
-          t.totalHours > 0
-            ? Math.round(
-                ((t.totalHours - t.remainingHours) / t.totalHours) * 100
-              )
-            : 100;
-
-        day.sessions.push({
-          duration: parseFloat(sess.toFixed(2)),
-          topic: t.topic,
-          subtopic: t.subtopic,
-          progressAfterSession: t.progressPercent,
-        });
-
-        remainingHours = parseFloat((remainingHours - sess).toFixed(6));
-        if (t.remainingHours <= 0.001) {
-          incomplete.shift();
-        }
-      }
-    }
-  });
-
-  // Return only days that actually have revision sessions
-  return revisionDays.filter((day) =>
-    day.sessions.some((s) => s.type === "revision")
-  );
 }
 
 /**
@@ -610,5 +488,4 @@ module.exports = {
   createTaskQueue,
   assignSessions,
   calculateRevisionSlots,
-  createRevisionPlan,
 };
