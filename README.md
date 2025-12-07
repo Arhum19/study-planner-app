@@ -132,8 +132,8 @@ Click **"Generate Study Plan"** and watch the algorithm create your personalized
 
 **📸 Input Screenshot:**
 
-> ![alt text](image.png)
-![alt text](image-1.png)
+> ![alt text](/images/input.png)
+![alt text](/images/input2.png)
 ---
 
 ### 📤 Example Output
@@ -149,10 +149,10 @@ Click **"Generate Study Plan"** and watch the algorithm create your personalized
 - Reviews all topics covered in previous days
 - Organized revision sessions
 
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
+![alt text](/images/output1.png)
+![alt text](/images/output2.png)
+![alt text](/images/output3.png)
+![alt text](/images/output4.png)
 
 
 **📸 Export PDF Screenshot:**
