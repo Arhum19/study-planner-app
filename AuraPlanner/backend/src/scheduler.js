@@ -1,4 +1,3 @@
-
 // Difficulty to weight mapping (unchanged)
 const DIFFICULTY_WEIGHTS = {
   1: 1.0,
@@ -123,7 +122,6 @@ function createTaskQueue(topics) {
  * Returns {dailyPlan, taskStates, allocatedHours}
  */
 function assignSessions(tasks, availability, sessionLength) {
-
   const dailyPlan = [];
   // Use deep clone of tasks as mutable states
   const taskStates = tasks.map((t) => ({ ...t }));

@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generatedAt": "2025-12-07T01:15:40.930Z",
+    "generatedAt": "2025-12-07T02:19:29.604Z",
     "durationDays": 7,
     "totalAvailableHours": 21,
     "totalRequiredHours": 18,
-    "allocatedLearningHours": 17.89,
+    "allocatedLearningHours": 17.77,
     "allocatedRevisionHours": 3,
     "learningDays": 6,
     "revisionDays": 1,
@@ -14,24 +14,24 @@
   },
   "topicsSummary": [
     {
-      "name": "123",
+      "name": "asd",
       "difficulty": 5,
-      "totalHours": 7.35,
-      "allocatedHours": 7.35,
+      "totalHours": 7.66,
+      "allocatedHours": 7.66,
       "progress": 100
     },
     {
       "name": "ww",
-      "difficulty": 2,
-      "totalHours": 4.41,
-      "allocatedHours": 4.3,
+      "difficulty": 4,
+      "totalHours": 6.51,
+      "allocatedHours": 6.3,
       "progress": 97
     },
     {
-      "name": "11",
-      "difficulty": 4,
-      "totalHours": 6.24,
-      "allocatedHours": 6.24,
+      "name": "ooo",
+      "difficulty": 1,
+      "totalHours": 3.83,
+      "allocatedHours": 3.81,
       "progress": 100
     }
   ],
@@ -42,15 +42,15 @@
       "sessions": [
         {
           "duration": 1.5,
-          "topic": "123",
-          "subtopic": "123",
+          "topic": "asd",
+          "subtopic": "asd",
           "progressAfterSession": 20
         },
         {
           "duration": 1.5,
-          "topic": "11",
-          "subtopic": "222",
-          "progressAfterSession": 24
+          "topic": "asd",
+          "subtopic": "asd",
+          "progressAfterSession": 39
         }
       ]
     },
@@ -60,15 +60,15 @@
       "sessions": [
         {
           "duration": 1.5,
-          "topic": "123",
-          "subtopic": "123",
-          "progressAfterSession": 41
+          "topic": "asd",
+          "subtopic": "asd",
+          "progressAfterSession": 59
         },
         {
           "duration": 1.5,
-          "topic": "11",
-          "subtopic": "222",
-          "progressAfterSession": 48
+          "topic": "ww",
+          "subtopic": "qq",
+          "progressAfterSession": 38
         }
       ]
     },
@@ -78,15 +78,15 @@
       "sessions": [
         {
           "duration": 1.5,
-          "topic": "ww",
-          "subtopic": "ww",
-          "progressAfterSession": 34
+          "topic": "ooo",
+          "subtopic": "ooo",
+          "progressAfterSession": 39
         },
         {
           "duration": 1.5,
-          "topic": "123",
-          "subtopic": "123",
-          "progressAfterSession": 61
+          "topic": "asd",
+          "subtopic": "asd",
+          "progressAfterSession": 78
         }
       ]
     },
@@ -96,15 +96,15 @@
       "sessions": [
         {
           "duration": 1.5,
-          "topic": "11",
-          "subtopic": "222",
-          "progressAfterSession": 72
+          "topic": "ww",
+          "subtopic": "qew",
+          "progressAfterSession": 58
         },
         {
           "duration": 1.5,
           "topic": "ww",
-          "subtopic": "ww",
-          "progressAfterSession": 68
+          "subtopic": "qq",
+          "progressAfterSession": 77
         }
       ]
     },
@@ -114,15 +114,21 @@
       "sessions": [
         {
           "duration": 1.5,
-          "topic": "123",
-          "subtopic": "123",
-          "progressAfterSession": 82
+          "topic": "ooo",
+          "subtopic": "ooo",
+          "progressAfterSession": 78
         },
         {
-          "duration": 1.5,
-          "topic": "11",
-          "subtopic": "222",
-          "progressAfterSession": 96
+          "duration": 1.12,
+          "topic": "asd",
+          "subtopic": "asd",
+          "progressAfterSession": 93
+        },
+        {
+          "duration": 0.38,
+          "topic": "ww",
+          "subtopic": "qew",
+          "progressAfterSession": 72
         }
       ]
     },
@@ -131,39 +137,45 @@
       "availabilityHours": 3,
       "sessions": [
         {
-          "duration": 1,
+          "duration": 0.75,
           "topic": "ww",
-          "subtopic": "ww",
-          "progressAfterSession": 91
+          "subtopic": "qq",
+          "progressAfterSession": 96
         },
         {
-          "duration": 0.67,
-          "topic": "123",
-          "subtopic": "123",
-          "progressAfterSession": 91
+          "duration": 0.56,
+          "topic": "ooo",
+          "subtopic": "ooo",
+          "progressAfterSession": 93
         },
         {
-          "duration": 0.44,
-          "topic": "123",
-          "subtopic": "123",
+          "duration": 0.42,
+          "topic": "ww",
+          "subtopic": "qew",
+          "progressAfterSession": 88
+        },
+        {
+          "duration": 0.32,
+          "topic": "asd",
+          "subtopic": "asd",
           "progressAfterSession": 97
         },
         {
-          "duration": 0.3,
+          "duration": 0.25,
           "topic": "ww",
-          "subtopic": "ww",
-          "progressAfterSession": 97
+          "subtopic": "qew",
+          "progressAfterSession": 98
         },
         {
-          "duration": 0.24,
-          "topic": "11",
-          "subtopic": "222",
+          "duration": 0.25,
+          "topic": "ooo",
+          "subtopic": "ooo",
           "progressAfterSession": 100
         },
         {
-          "duration": 0.24,
-          "topic": "123",
-          "subtopic": "123",
+          "duration": 0.22,
+          "topic": "asd",
+          "subtopic": "asd",
           "progressAfterSession": 100
         }
       ]
@@ -174,20 +186,20 @@
       "sessions": [
         {
           "duration": 1,
-          "topic": "123",
-          "subtopic": "123",
+          "topic": "asd",
+          "subtopic": "asd",
           "type": "revision"
         },
         {
           "duration": 1,
-          "topic": "123",
-          "subtopic": "123",
+          "topic": "asd",
+          "subtopic": "asd",
           "type": "revision"
         },
         {
           "duration": 1,
           "topic": "ww",
-          "subtopic": "ww",
+          "subtopic": "qq",
           "type": "revision"
         }
       ]
@@ -196,6 +208,6 @@
   "revisionPlan": [],
   "warnings": [
     "⚠️ Time constraint: 99% of syllabus covered in available time",
-    "⏰ Additional 0.1h needed to fully complete all topics"
+    "⏰ Additional 0.2h needed to fully complete all topics"
   ]
 }
