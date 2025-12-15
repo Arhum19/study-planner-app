@@ -507,12 +507,14 @@ Day 2: Availability (5hr)
 **Key UI Components Required:**
 
 **1️⃣ Home Dashboard**
+
 - Clean overview with upcoming study sessions
 - Quick stats on progress and weekly total hours
 - Highlighted next task
 - Beautiful charts/graphs (progress donut, weekly bar graph)
 
 **2️⃣ Study Plan Workspace**
+
 - Full weekly plan view
 - Accordion-style expandable days
 - Study sessions as cards or time blocks
@@ -520,24 +522,28 @@ Day 2: Availability (5hr)
 - Timeline or schedule-like layout
 
 **3️⃣ Topic & Subtopic Manager**
+
 - Adding topics and subtopics interface
 - Difficulty sliders
 - Percent distribution controls
 - Polished, form-like UI with clean components
 
 **4️⃣ Availability Editor**
+
 - Calendar-like time selection
 - Daily hour sliders
 - Weekly calendar grid
 - Quick presets (light week, exam week, custom)
 
 **5️⃣ Settings / Personalization**
+
 - Theme customization (Light/Dark mode)
 - User preferences
 - Language selector
 - Minimal but modern settings page
 
 **6️⃣ Navigation**
+
 - Modern sidebar with clean icon set
 - Links: Dashboard, Study Planner, Topics, Availability, Settings
 

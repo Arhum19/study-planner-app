@@ -106,7 +106,7 @@ export default function PlannerPage() {
               darkMode ? "text-white" : "text-gray-900"
             }`}
           >
-            ARHUM STUDY PLANNER
+            AURA PLANNER
           </h1>
           <p className={darkMode ? "text-gray-300" : "text-gray-600"}>
             Create realistic study plans based on your availability

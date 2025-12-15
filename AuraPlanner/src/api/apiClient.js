@@ -1,4 +1,5 @@
-const API_BASE_URL = "http://localhost:5000/api";
+// Use relative URL for Vercel deployment (works both locally with proxy and in production)
+const API_BASE_URL = "/api";
 
 class APIError extends Error {
   constructor(message, status) {
