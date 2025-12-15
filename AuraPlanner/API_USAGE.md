@@ -215,6 +215,7 @@ Tests:       16 passed, 16 total
 - ✅ Full plan generation integration
 
 ---
+gg
 
 ## 🎨 Using the Frontend
 
