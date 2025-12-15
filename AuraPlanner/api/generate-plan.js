@@ -1,7 +1,7 @@
 // Vercel Serverless Function: POST /api/generate-plan
 // Core plan generation endpoint - uses scheduler.generatePlan()
 
-const scheduler = require("./lib/scheduler");
+import { generatePlan } from "./lib/scheduler.js";
 
 export default function handler(req, res) {
   // Set CORS headers
@@ -43,7 +43,7 @@ export default function handler(req, res) {
     }
 
     // Generate plan using scheduler - UNCHANGED LOGIC
-    const plan = scheduler.generatePlan({
+    const plan = generatePlan({
       durationDays,
       availability,
       topics,

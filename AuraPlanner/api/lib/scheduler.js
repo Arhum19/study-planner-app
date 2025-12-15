@@ -477,7 +477,7 @@ function generatePlan(input) {
   };
 }
 
-module.exports = {
+export {
   generatePlan,
   DIFFICULTY_WEIGHTS,
   normalizeSubtopics,
